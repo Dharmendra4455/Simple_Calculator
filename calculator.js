@@ -45,7 +45,7 @@ function equalFun()
     else if(str[str.length-1]=="*" ||str[str.length-1]=="+" ||str[str.length-1]=="-" ||str[str.length-1]=="/"
     ||str[0]=="*" ||str[0]=="/"  )
     {
-        str.innerHTML="Maths Error"
+        text.innerHTML="Maths Error"
     }
     else
     {
