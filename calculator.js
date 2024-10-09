@@ -1,9 +1,40 @@
+window.addEventListener("keydown",(a)=>{
+ console.log(a);
+    /*if(a.key=="Enter"){
+       var b= "=";
+       alert(b)
+    }*/
+    console.log(a.key)
+ if(a.key>=0 ||a.key<=9)
+ numFun(a.key)
+ else if(a.key== "="|| a.key=="Enter")
+ if(a.key=="Enter")
+ { b="1"
+    equalFun();
+    //DelFun();
+   
+
+ }
+ else{
+    equalFun()
+ }
+ 
+else if(a.key=="+"||a.key=="-"||a.key=="*"||a.key=="/")
+    opFun(a.key)
+else if(a.key=="Backspace")
+DelFun()
+})
+
+
+
+
 var str=""
 var opcheker=1;
 var size;
 var num_btn=document.getElementsByClassName("btn")
 var text=document.querySelector(".text");
 function numFun(a){
+
    
     opcheker=1;
     if(str.length>10 && str.length<16 )
@@ -38,25 +69,46 @@ function opFun(op){
     text.innerHTML=str
 }
 function equalFun()
-{
+{    
     if(str.length==0){
         text.innerHTML="0";
+       
     }
-    else if(str[str.length-1]=="*" ||str[str.length-1]=="+" ||str[str.length-1]=="-" ||str[str.length-1]=="/"
-    ||str[0]=="*" ||str[0]=="/"  )
+    else if(str[str.length-1]=="*" || str[str.length-1]=="+" ||str[str.length-1]=="-" ||str[str.length-1]=="/"
+    ||str[0]=="*" ||str[0]=="/")
     {
-        text.innerHTML="Maths Error"
+        text.innerHTML="Maths Error";
     }
     else
-    {
-      str=eval(str);
-      if(str.length>15)
-      {
-        str.toFixed(10);
-        text.innerHTML=str
-       }
-       else
-        text.innerHTML=str
+    {   count=0; 
+        var i; 
+        str=eval(str);
+        a=str;
+        for(i=0;i<=10;i++)
+        { if(a%1>0)
+          a=a*10;  
+          else
+          break;
+        }
+        str=str.toFixed(i);
+        alert(str.length)
+        text.innerHTML=str;
+        //alert(str.length)
+     
+      /*if(a>0){
+        str=str.toFixed(10);
+      //alert(str.len(str))
+        text.innerHTML=str;
+      }
+      else{
+        text.innerHTML=str;
+      }*/
+
+
+
+
+      //
+        
       
     }
 }
@@ -73,3 +125,4 @@ function DelFun(){
     else
     text.innerHTML=str
 }
+
