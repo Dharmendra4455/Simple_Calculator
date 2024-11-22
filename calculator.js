@@ -91,7 +91,7 @@ function equalFun()
           break;
         }
         str=str.toFixed(i);
-        alert(str.length)
+        //alert(str.length)
         text.innerHTML=str;
         //alert(str.length)
      
