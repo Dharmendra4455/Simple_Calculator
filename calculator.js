@@ -91,9 +91,9 @@ function equalFun()
           break;
         }
         str=str.toFixed(i);
-        //alert(str.length)
+        
         text.innerHTML=str;
-        //alert(str.length)
+        
      
       /*if(a>0){
         str=str.toFixed(10);
@@ -102,14 +102,7 @@ function equalFun()
       }
       else{
         text.innerHTML=str;
-      }*/
-
-
-
-
-      //
-        
-      
+            }*/
     }
 }
 function AcFun(){
@@ -117,7 +110,7 @@ function AcFun(){
     text.innerHTML="0";
 }
 function DelFun(){
-   //alert(typeof(str))
+   
     str=str.slice(0,str.length-1);
     if(str.length==0){
             text.innerHTML="0";
